@@ -7,6 +7,6 @@ cd Python-3.9.1
 make -j 4
 sudo make altinstall
 cd ..
-rm Python-3.9.1
+rmdir Python-3.9.1
 rm Python-3.9.1.tar.xz
 python3.9 --version
