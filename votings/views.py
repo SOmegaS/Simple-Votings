@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-# Create your views here.
+from simple_votings import database
 
 
 def main_page(request):
