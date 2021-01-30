@@ -1,0 +1,61 @@
+{% extends 'votings/basic.html' %}
+
+
+<style media="screen">
+  .home-page__header {
+    font-weight: 800;
+    font-size: 60px;
+    line-height: 1.3em;
+  }
+
+  .home-page__content {
+    margin: 10em 18em;
+  }
+
+  .home-page__text {
+    font-size: 30px;
+  }
+
+  .additional {
+    font-weight: 200;
+    font-size: 25px;
+  }
+
+  .home-page__button a {
+    font-size: 30px;
+    padding: 30px;
+  }
+
+  .home-page__button a:hover {
+    background-color: #e7a08a;
+  }
+</style>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="home-page__content">
+        <div class="col-sm-6 ">
+          <h1 class="home-page__header">WELCOME TO THE SIMPLE VOTINGS</h1>
+        </div>
+        <div class="col-sm-5 mt-4">
+          <div class="home-page__text">
+            <p>
+              Here you can create voting and participate in votings of other users.
+              You choose who or what to vote for!
+              You can view results of votings.
+            </p>
+          </div>
+          <div class="home-page__text additional">
+            <p>Alpha</p>
+          </div>
+          <div class="home-page__button mt-4">
+            <a class="sv-btn link-restyle" href="#">CREATE THEME</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% block title %}
+  Simple Votings | Main
+{% endblock %}
