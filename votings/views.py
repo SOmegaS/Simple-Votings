@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpRequest
-from votings.database import database
+
+from votings.models import Users, Votings
 
 
 def main_page(request: HttpRequest):
