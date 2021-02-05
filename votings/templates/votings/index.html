@@ -1,6 +1,5 @@
 {% extends 'votings/basic.html' %}
 
-
 <style media="screen">
   .home-page__header {
     font-weight: 800;
@@ -30,11 +29,11 @@
     background-color: #e7a08a;
   }
 </style>
-
-  <div class="container-fluid">
+{% block content %}
+  <div class="container">
     <div class="row">
       <div class="home-page__content">
-        <div class="col-sm-6 ">
+        <div class="col-sm-6">
           <h1 class="home-page__header">WELCOME TO THE SIMPLE VOTINGS</h1>
         </div>
         <div class="col-sm-5 mt-4">
@@ -48,13 +47,11 @@
           <div class="home-page__text additional">
             <p>Alpha</p>
           </div>
-          <div class="home-page__button mt-4">
-            <a class="sv-btn link-restyle" href="#">CREATE THEME</a>
-          </div>
         </div>
       </div>
     </div>
   </div>
+{% endblock %}
 
 {% block title %}
   Simple Votings | Main

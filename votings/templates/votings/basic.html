@@ -16,63 +16,20 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand main-mnu">
-          <div class="collapse navbar-collapse">
-            <a class="navbar-brand d-flex align-items-center text-white  ml-5" href="/">
-              <img src="img/logo.png" alt="Logo">
-            </a>
-            <ul class="navbar-nav mr-auto mt-lg-0">
-              <li class="nav-item">
-                <a class="sv-btn dropdown-toggle link-restyle" href="#">THEMES</a>
-                <!-- вот здесь у нас - список тем. Учтите, что у первого элемента должен быть также и класс mt-2, а у последнего - mb-4 -->
-                <div class="dropdown-menu position-absolute" aria-labelledby="dropdownMenuLink">
-                  <form class="form-inline">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success m4-2 my-sm-0 mr-2" type="submit"><i class="fas fa-search"></i></button>
-                  </form>
-                  <!-- кстати, думаю, что форма будет постоянной, поэтому перебирать темы через Джанго (если вы будете это делать), то форму трогать не надо. -->
-                  <a class="dropdown-item mt-2" href="#">ANIME</a>
-                  <a class="dropdown-item" href="#">MYTHS</a>
-                  <a class="dropdown-item" href="#">GAMES</a>
-                  <a class="dropdown-item mb-4" href="#">MUSIC</a>
-                </div>
-              </li>
-              <li class="nav-item">
-                <a class="sv-btn link-restyle" href="#">CREATE THEME</a>
-              </li>
-            </ul>
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item">
-                <div class="user-avatar">
-                  <img src="https://cs8.pikabu.ru/avatars/2394/x2394359-1990384763.png">
-                </div>
-              </li>
-              <li class="nav-item">
-                <div class="user-name">
-                  <p>Anonim Anonimus</p>
-                </div>
-              </li>
-            </ul>
-              <a class="sv-btn link-restyle ml-4 mr-5">LOG OUT</a>
-          </div>
-        </nav>
+        {% block header %}
+        {% include 'votings/header.html' %}
+        {% endblock %}
     </header>
-    {% block content %}
-      No content here.
-    {% endblock %}
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
     <footer class="footer-sv">
-      <div class="container-fluid">
-        <div class="footer-section navbar-expand">
-          <ul class="navbar-nav mr-auto mt-lg-0 footer-icons">
-            <li class="nav-item mr-3">
-              <i class="fab fa-discord"></i>
-            </li>
-            <li class="nav-item">
-              <i class="fas fa-cog"></i>
-            </li>
-          </ul>
-        </div>
-      </div>
+        {% block footer %}
+        {% include 'votings/footer.html' %}
+        {% endblock %}
     </footer>
     <script>
 

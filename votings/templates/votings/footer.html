@@ -1,9 +1,19 @@
-<!-- Удалить при шаблонизации все, кроме того, что в nav, - подключение фреймворков и CSS. -->
-<head>
-  <title>Simple Votings</title>
-  <link rel="stylesheet" href="css/style.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-</head>
+{% block footer %}
+<body>
+ <div class="container-fluid">
+        <div class="footer-section navbar-expand">
+          <ul class="navbar-nav mr-auto mt-lg-0 footer-icons">
+            <li class="nav-item mr-3">
+              <i class="fab fa-discord"></i>
+            </li>
+            <li class="nav-item">
+              <i class="fas fa-cog"></i>
+            </li>
+          </ul>
+        </div>
+      </div>
+</body>
+{% endblock %}
 
 <style media="screen">
   .footer-sv {
@@ -19,12 +29,3 @@
     color: #4B3030;
   }
 </style>
-
-
-
-<!-- Фреймворки и скрипты. При шаблонизации тоже убрать, убедившись, что в проекте `стоит` все нужной версии. -->
-
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-<script src="js/libs.min.js"></script>
-<script src="js/main.js"></script>
