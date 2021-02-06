@@ -66,10 +66,11 @@
 
 
 </style>
+{% load static %}
  <nav class="navbar navbar-expand main-mnu">
           <div class="collapse navbar-collapse">
-            <a class="navbar-brand d-flex align-items-center text-white  ml-5" href="/">
-              <img src="img/logo.png" alt="Logo">
+            <a class="navbar-brand d-flex align-items-center text-white  ml-5" href="{% url 'index' %}">
+              <img src="{% static 'votings/img/logo.png' %}"  style="width: 100px;" alt="Logo">
             </a>
             <ul class="navbar-nav mr-auto mt-lg-0">
               <li class="nav-item">
@@ -82,13 +83,13 @@
                   </form>
                   <!-- кстати, думаю, что форма будет постоянной, поэтому перебирать темы через Джанго (если вы будете это делать), то форму трогать не надо. -->
                   <a class="dropdown-item mt-2" href="#">ANIME</a>
-                  <a class="dropdown-item" href="#">MYTHS</a>
+                  <a class="dropdown-item" href="#">ANIMALS</a>
                   <a class="dropdown-item" href="#">GAMES</a>
                   <a class="dropdown-item mb-4" href="#">MUSIC</a>
                 </div>
               </li>
               <li class="nav-item">
-                <a class="sv-btn link-restyle" href="#">CREATE THEME</a>
+                <a class="sv-btn link-restyle" href="{% url 'create' %}">CREATE THEME</a>
               </li>
             </ul>
             <ul class="navbar-nav ml-auto">
@@ -99,7 +100,7 @@
               </li>
               <li class="nav-item">
                 <div class="user-name">
-                  <p>Anonim Anonimus</p>
+                  <a href="{% url 'profile' %}">Anonim Anonimus</a>
                 </div>
               </li>
             </ul>

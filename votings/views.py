@@ -31,3 +31,15 @@ def vote_page(request: HttpRequest):
 def profile_page(request: HttpRequest):
     ctx = {}
     return render(request, 'votings/profile.html', ctx)
+
+def votings_page(request: HttpRequest):
+    ctx = {}
+    return render(request, 'votings/votings.html', ctx)
+
+def themes_page(request: HttpRequest):
+    ctx = {}
+    return render(request, 'votings/themes.html', ctx)
+
+def create_poll_page(request: HttpRequest):
+    ctx = {}
+    return render(request, 'votings/create_poll.html', ctx)

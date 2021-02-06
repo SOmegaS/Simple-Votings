@@ -12,9 +12,8 @@ class Users(models.Model):
 
 
 class Votings(models.Model):
-    type = models.TextField()  # Тип чего???
+    type = models.TextField()  # Тема голосования
     name = models.TextField()  # Имя
     variants = models.TextField()  # Варианты ответов
-    choose_type = models.TextField()  # ???
     color = models.TextField()  # Цвет
     back_ground_image = models.TextField()  # Фоновая картинка
